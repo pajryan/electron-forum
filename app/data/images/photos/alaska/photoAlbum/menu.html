@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="res/dtree.js"></script>
+	<style type="text/css">
+	<!--
+	body 
+	{
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		background-color: #191919;
+	}
+	/*--------------------------------------------------|
+	| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+	|---------------------------------------------------|
+	| Copyright (c) 2002-2003 Geir Landr                |
+	|--------------------------------------------------*/
+
+	.dtree {
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		color: #666666;
+		white-space: nowrap;
+	}
+	.dtree img {
+		border: 0px;
+		vertical-align: middle;
+	}
+	.dtree a {
+		color: #666666;
+		text-decoration: none;
+	}
+	.dtree a.node, .dtree a.nodeSel {
+		white-space: nowrap;
+		padding: 1px 2px 1px 2px;
+	}
+	.dtree a.node:hover, .dtree a.nodeSel:hover {
+		color: #b2b2b2;
+		text-decoration: none;
+	}
+	.dtree a.nodeSel {
+		font-weight:bold;
+		color: #ffffff;
+	}
+	.dtree .clip {
+		overflow: hidden;
+	}		
+	-->
+	</style>
+<title>Alaska</title>
+
+</head>
+<body>
+<div class="dtree">
+	<p>
+	<a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a>
+	</p>
+	<script type="text/javascript">
+		<!--
+		d = new dTree('d');
+		d.config.target = "2";
+		d.config.useIcons=false;
+d.add(0,-1,'Alaska','blank.html');
+d.add(1,0,'patrick and kate<span style=\'font-size:9px\'> (195)</span>',encodeURI('Patrick_and_Kate/sv.html'));
+
+		document.write(d);
+		//d.openTo(0, true);
+		//-->
+	</script>
+</div>
+</body>
+</html>

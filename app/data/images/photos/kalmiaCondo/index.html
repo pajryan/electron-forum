@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>2800 Kalmia Ave.</title>
+		
+		
+		<style type="text/css">
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+				font-size: 76%;
+				margin:0;
+				padding:0;
+				background:#ffffff;
+			}
+			img{
+				padding:0;
+				margin:0;
+			}
+			a{
+				color:#2d59ac;
+				text-decoration:none;
+			}
+			a:hover{
+				text-decoration:underline;
+			}
+			#headerBar, #footerBar{
+				font-size:2em;
+				font-weight:bold;
+				padding:0 10px;
+			}
+			#topDisplay{
+				width:975px;
+				margin:auto;
+				min-height:390px;
+			}
+			
+			
+			#middleDisplay{
+				background:#ffffcc;
+				border-top:1px solid #666666;
+				border-bottom:1px solid #666666;
+			 	min-height:260px;
+				padding:5px 0 0 0;
+			}
+				#condo{
+					width:640px;
+					margin:auto;
+				}
+					#condoPorch{position:relative;top:;left:;cursor:pointer;}
+					#condoLivingRoom{position:relative;top:-3px;left:-364px; cursor:pointer;}
+					#condoBedroomTwo{position:relative;top:-194px;left:264px; cursor:pointer;}
+					#condoBedroom{position:relative;top:-194px;left:260px; cursor:pointer;}
+					#condoKitchen{position:relative;top:-38px;left:-364px; cursor:pointer;}
+					#condoHall{position:relative;top:-197px;left:264px; cursor:pointer;}
+					#condoBaths{position:relative;top:146px;left:264px;}
+					
+		</style>
+		
+		<script type="text/javascript">
+			
+			function showImages(toShow){
+				document.getElementById("porch").style.display="none";
+				document.getElementById("livingRoom").style.display="none";
+				document.getElementById("bedroom").style.display="none";
+				document.getElementById("bedroomTwo").style.display="none";
+				document.getElementById("kitchen").style.display="none";
+				document.getElementById("hall").style.display="none";
+				document.getElementById("map").style.display="none";
+				document.getElementById("pool").style.display="none";
+				document.getElementById("information").style.display="none";
+
+				document.getElementById(toShow).style.display="block";
+			
+			}
+			
+		</script>
+	</head>
+	<body >
+
+	<div id="headerBar">
+		<span style="float:right">call 720-346-3281</span>
+		2800 Kalmia Ave. Boulder, CO
+	</div>
+	
+	
+	<div id="topDisplay">
+		<div id="information">
+		<p>
+			We are renting our 2 bedroom / 2 full bath condo.  It is available September 1st for $1100/mo.
+			<br /><br />
+			The condo backs up to the N. Boulder path system, is a quick walk to Safeway and Vic's(!), and is near the bus stop with easy access to the highways.
+			<br /><br />
+			Included are:
+			<ul>
+				<li>washer/dryer</li>
+				<li>dishwasher (all new kitchen appliances)</li>
+				<li>wood burning fireplace</li>
+				<li>deck</li>
+				<li>storage unit</li>
+				<li>gas, heat and water (you only pay electricity, $25-$35/mo)</li>
+				<li>one designated parking place (with plenty of additional parking too)</li>
+			</ul>
+		
+			The apartment is in the Aspen Grove Complex - Unit A208
+			<br /><br />
+			The complex has a <i>very</i> nice pool and hot tub (excellent after ski days...).
+			<br /><br />
+			A well behaved dog or cat is negotiable.
+			<br /><br />
+			If you're interested please give me a call at 720-346-3281.
+			<br /><br />
+			Below is a floorplan. You can click on there to see a bunch of pictures.  There is also a link to a map, and pictures of the pool!
+			<br /><br />
+			Thanks! Patrick & Kate.
+		</p>
+		</div>
+		
+		<div id="porch" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/porchTop.gif' />
+		</div>
+		<div id="livingRoom" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/livingRoomTop.gif' />
+		</div>
+		<div id="bedroom" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/bedroomTop.gif' />
+		</div>
+		<div id="bedroomTwo" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/bedroom2Top.gif' />
+		</div>
+		<div id="kitchen" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/kitchenTop.gif' />
+		</div>
+		<div id="hall" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/hallTop.gif' />
+		</div>
+		<div id="map" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/map.gif' />
+		</div>
+		<div id="pool" style="display:none;">
+			<img src='http://www.agavegroup.com/photos/kalmiaCondo/condoImages/poolTop.gif' />
+		</div>
+		
+	</div>
+
+
+	<div id="middleDisplay">
+		<p style="text-align:right; padding-right:40px;"><a href="" onclick="showImages('information'); return false;">information</a><a href="" style="margin-left:20px;" onclick="showImages('map'); return false;">street map</a><a href="" style="margin-left:20px;" onclick="showImages('pool'); return false;">pool</a><p>
+	
+		<div id="condo">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/porch.gif" id="condoPorch" onclick="showImages('porch')" onmouseover="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/porchRoll.gif'" onmouseout="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/porch.gif'">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/baths.gif" id="condoBaths">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/livingRoom.gif" id="condoLivingRoom" onclick="showImages('livingRoom')" onmouseover="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/livingRoomRoll.gif'" onmouseout="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/livingRoom.gif'">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/bedroom2.gif" id="condoBedroomTwo" onclick="showImages('bedroomTwo')" onmouseover="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/bedroom2Roll.gif'" onmouseout="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/bedroom2.gif'">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/bedroom.gif" id="condoBedroom" onclick="showImages('bedroom')" onmouseover="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/bedroomRoll.gif'" onmouseout="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/bedroom.gif'">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/kitchen.gif" id="condoKitchen" onclick="showImages('kitchen')" onmouseover="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/kitchenRoll.gif'" onmouseout="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/kitchen.gif'">
+			<img src="http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/hall.gif" id="condoHall" onclick="showImages('hall')" onmouseover="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/hallRoll.gif'" onmouseout="this.src='http://www.agavegroup.com/photos/kalmiaCondo/condoPieces/hall.gif'">
+		</div>
+	
+	</div>
+	
+	
+	<div id="footerBar">
+		<span style="float:right">$1100 per month (heat & water incl.)</span>
+		available September 1<sup>st</sup>
+	</div>
+	</body>
+</html>

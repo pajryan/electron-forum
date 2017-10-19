@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SIMPLEVIEWER_DATA 
+	title="&lt;font face=&quot;Tohma&quot; size=&quot;20&quot;&gt;Alaska&lt;/font&gt;" 
+	imagePath="slides/" 
+	thumbPath="thumbs/" 
+	maxImageDimension="600" 
+	textColor="0x666666" 
+	frameColor="0x666666" 
+	bgColor="0x191919" 
+	frameWidth="1" 
+	stagePadding="40" 
+	thumbnailColumns="3" 
+	thumbnailRows="6" 
+	navPosition="left" 
+	navDirection="LTR"
+	enableRightClickOpen="true" 
+	backgroundImagePath="">
+
+
+
+
+
+
+
+
+
+
+
+</SIMPLEVIEWER_DATA>
+

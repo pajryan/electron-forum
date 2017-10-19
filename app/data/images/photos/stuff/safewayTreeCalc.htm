@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Receipt -> Trees</title>
+<style>
+body{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+
+table{
+	font-size: 10px;
+}
+
+td{
+	text-align:center;
+	font-size: 10px;
+}
+
+.num{
+	border-bottom:1px solid #999999;
+	padding:2px 2px 0 2px;
+}
+
+.den{
+	padding:0px 2px 2px 2px;
+}
+
+.mult{
+	padding:8px;
+	font-size:12px;
+}
+input{
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+.answer{
+	border:0;
+	font-weight:bold;
+	text-align:center;
+	background:#bd8282;
+}
+.numAns{
+	font-weight:bold;
+	border-bottom:1px solid #000000;
+	background:#bd8282;
+	padding:2px 2px 0 2px;
+}
+.denAns{
+	font-weight:bold;
+	background:#bd8282;
+	padding:0px 2px 2px 2px;
+}
+p{
+	font-size:11px;
+	margin:0;
+}
+div{
+	margin:50px;
+	padding:5px;
+	background:f7f7f7;
+	width:600px;
+	border:1px solid #999999;
+}
+
+#myReceipt{display:none;}
+#oneCord{display:none;}
+#sfwyStores{display:none;}
+#oneSheet{display:none;}
+#paperTree{display:none;}
+#oneTree{display:none;}
+</style>
+<script>
+	function calcTrees(cust){
+		if(isNaN(cust)){
+			return;
+		}
+		factor1 = 0.0019044
+		factor2 = 365
+		document.calc.treePerDay.value=Math.round(cust*factor1*100)/100
+		document.calc.treePerYear.value=Math.round(cust*factor1*factor2*100)/100
+		document.calc.custGuess.focus()
+	}
+
+	function hide(item){
+		document.getElementById(item).style.display="none"
+	}
+	
+	function show(item){
+		document.getElementById(item).style.display="block"
+	}
+	
+	function showInfo(chosen){
+		hide("myReceipt")
+		hide("oneCord")
+		hide("sfwyStores")
+		hide("oneSheet")
+		hide("paperTree")
+		hide("oneTree")
+		show(chosen)
+	}	
+</script>
+
+</head>
+
+<body>
+<form name="calc">
+<p style="width:300px;">Enter your best guess on the average number of customers in a given safeway store per day...<br /><br />The calculations in red will be done automatically.</p>
+<br /><br /><br />
+
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="num"><input name="custGuess" type="text" size="6" onKeyUp="calcTrees(this.value);this.focus" value="1500" style="background:#ffffcc;" /> customers per day</td>
+<td rowspan="2" class="mult">x</td>
+<td class="num"><a href="javascript:showInfo('myReceipt')">19.5 in<sup>2</sup></a></td>
+<td rowspan="2" class="mult">x</td>
+<td class="num">1 sheet of paper</td>
+<td rowspan="2" class="mult">x</td>
+<td class="num">1 cord</td>
+<td rowspan="2" class="mult">x</td>
+<td class="num"><a href="javascript:showInfo('oneCord')">128 ft<sup>3</sup></a></td>
+<td rowspan="2" class="mult">x</td>
+<td class="num">1 tree</td>
+<td rowspan="2" class="mult">x</td>
+<td rowspan="2"><a href="javascript:showInfo('sfwyStores')">1817 stores</a></td>
+<td rowspan="2" class="mult">=</td>
+<td class="numAns"><input name="treePerDay" type="text" class="answer" size="6" onkeypress="this.blur()" value="2.85" /><b> trees</b></td>
+<td rowspan="2" class="mult">x</td>
+<td class="num">365 days</td>
+<td rowspan="2" class="mult">=</td>
+<td class="numAns"><input name="treePerYear" type="text" class="answer" size="8" onkeypress="this.blur()" value="1042.66" /><b> trees</b></td>
+</tr>
+
+<tr>
+<td class="den">1 store</td>
+<td class="den">1 customer</td>
+<td class="den"><a href="javascript:showInfo('oneSheet')">93.5 in<sup>2</sup></a></td>
+<td class="den"><a href="javascript:showInfo('paperTree')">90,000 sheets of paper</a></td>
+<td class="den">1 cord</td>
+<td class="den"><a href="javascript:showInfo('oneTree')">283 ft<sup>3</sup></a></td>
+<td class="denAns"><b>day</b></td>
+<td class="den">1 year</td>
+<td class="denAns"><b>year</b></td>
+</tr>
+</table>
+
+<div id="myReceipt"><p>This calculation come from my receipt (below).  The extra junk on my receipt occupied 6.5 inches by 3 inches of paper, or <b>19.5 square inches</b>.</p></div>
+<div id="oneCord"><p>One cord of wood is 4 feet by 4 feet by 8 feet, or <b>128 cubic feet</b>.</p></div>
+<div id="sfwyStores"><p>According to <a href="http://finance.yahoo.com/q?s=SWY" target="_blank">yahoo finance</a>, there are <b>1817 Safeway stores</b> in the country as of Jan 3, 2004.</p></div>
+<div id="oneSheet"><p>One sheet of paper is 8.5 inches by 11 inches, or <b>93.5 square inches</b>.</p></div>
+<div id="oneTree"><p><img src="treeDim.gif" style="float:right;" /><br /><br /><br /><br /><br /><br />This is a bit of a guess on my part. I figured a tree that is 3 feet in diameter and 40 feet tall.  That may not be representative of the average tree, but...<br /><br />So the amount of wood (assuming 100% is used) from a tree is:<br /> pi * 1.5 ft <sup>2</sup> * 40 ft, or <b>283 cubic feet</b>.  </p></div>
+<div id="paperTree"><p>According to <a href="http://www.infoplease.com/askeds/4-14-00askeds.html" target="_blank">this site</a> one cord of wood can be made into <b>90,000 sheets of paper</b>.</p></div>
+
+</form>
+<br /><br />
+<br /><br />
+<img src="receiptSide.gif" alt="full receipt" />
+</body>
+</html>
